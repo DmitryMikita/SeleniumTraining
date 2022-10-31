@@ -221,7 +221,6 @@ public class CardOrderPageTest {
             "+7(999)1231234",
             "89991231234",
             "+7123456789",
-            "+89991231234",
             "null"
     }
 
@@ -245,7 +244,7 @@ public class CardOrderPageTest {
         driver.findElement(By.cssSelector("[type=\"text\"]")).sendKeys("Иван Севастьяов");
         driver.findElement(By.cssSelector("[type=\"tel\"]")).sendKeys("+79991231234");
         driver.findElement(By.className("button__text")).click();
-       String classCheckbox = driver.findElement(By.cssSelector("[data-test-id=\"agreement\"]")).getAttribute("class");
+        String classCheckbox = driver.findElement(By.cssSelector("[data-test-id=\"agreement\"]")).getAttribute("class");
         assertTrue(classCheckbox.contains("input_invalid"));
 
     }
